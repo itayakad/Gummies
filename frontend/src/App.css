@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    padding: 1em;
+    color: white;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .home {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .home h2 {
+    color: #4CAF50;
+  }
+  
+  .home p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .home button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .home button:hover {
+    background-color: #45a049;
+  }
+  
+  .quiz {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .quiz h2 {
+    color: #4CAF50;
+  }
+  
+  .quiz p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  .quiz input {
+    margin: 5px 0;
+    padding: 8px;
+    width: 60%;
+    max-width: 300px;
+    font-size: 1em;
+  }
+  
+  .quiz button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+  }
+  
+  .quiz button:hover {
+    background-color: #45a049;
+  }
+  
+  .recommendations {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .recommendations h2 {
+    color: #4CAF50;
+  }
+  
+  .recommendations p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  .recommendations ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+  }
+  
+  .recommendations li {
+    margin: 5px 0;
+  }
+  
+  .about {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about h2 {
+    color: #4CAF50;
+  }
+  
+  .about p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
