@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Home from './pages/Home';
 import Quiz from './pages/Quiz';
 import Recommendations from './pages/Recommendations';
@@ -10,13 +10,28 @@ function App() {
   return (
     <Router>
       <header>
-        <h1>Personalized Gummies</h1>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/quiz">Quiz</Link>
-          <Link to="/recommendations">Recommendations</Link>
-          <Link to="/about">About</Link>
-        </nav>
+        <div className="header-top">
+          <NavLink to="/login" className="account-link">
+            <i className="fas fa-user"></i> Account
+          </NavLink>
+        </div>
+        <div className="header-content">
+          <h1>Personalized Gummies</h1>
+          <nav>
+            <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              Home
+            </NavLink>
+            <NavLink to="/quiz" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              Quiz
+            </NavLink>
+            <NavLink to="/recommendations" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              Recommendations
+            </NavLink>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              About
+            </NavLink>
+          </nav>
+        </div>
       </header>
       <main>
         <Routes>

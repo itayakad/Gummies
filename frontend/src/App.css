@@ -1,22 +1,90 @@
+/* Base styling for the entire page */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #f4f4f9;
   }
   
-  header {
+  /* Header styling */
+  /* General styling for the header */
+header {
     background-color: #4CAF50;
-    padding: 1em;
     color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Top section with Account link */
+  .header-top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+  }
+  
+  .account-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .account-link:hover {
+    color: #f0f0f0;
+  }
+  
+  /* Main header content (Title and Nav links) */
+  .header-content {
+    text-align: center;
+    padding: 1.5em 0;
+  }
+  
+  .header-content h1 {
+    margin: 0;
+    font-size: 1.8em;
+  }
+  
+  /* Navigation styling */
+  nav {
+    margin-top: 10px;
   }
   
   nav a {
     margin: 0 15px;
     color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
   }
   
+  .active-link {
+    border-bottom: 3px solid white;
+    padding-bottom: 2px;
+  }
+  
+  nav a:hover {
+    color: #f0f0f0;
+  }  
+  
+  .account-link {
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .account-link:hover {
+    color: #f0f0f0;
+  }
+  
+  .active-link {
+    border-bottom: 3px solid white;
+    padding-bottom: 2px;
+  }
+  
+  /* Footer styling */
   footer {
     background-color: #333;
     color: white;
@@ -24,64 +92,88 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
   }
   
+  /* Home page styling */
   .home {
-    padding: 20px;
+    padding: 40px;
     text-align: center;
+    background-color: #f9f9f9;;
   }
   
   .home h2 {
     color: #4CAF50;
+    font-size: 2em;
   }
   
   .home p {
     font-size: 1.2em;
-    margin: 10px 0;
+    margin: 15px 0;
+    color: #555;
   }
   
   .home button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
   }
   
   .home button:hover {
     background-color: #45a049;
   }
   
+  /* General quiz container styling */
   .quiz {
-    padding: 20px;
+    padding: 30px;
     text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .quiz h2 {
     color: #4CAF50;
+    font-size: 1.8em;
+    margin-bottom: 15px;
   }
   
   .quiz p {
     font-size: 1.1em;
     margin: 10px 0;
+    color: #333;
   }
   
-  .quiz input {
-    margin: 5px 0;
-    padding: 8px;
-    width: 60%;
-    max-width: 300px;
+  /* Input field styling */
+  .quiz input,
+  .quiz select {
+    margin: 10px 0;
+    padding: 10px;
+    width: 70%;
+    max-width: 400px;
     font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
   
+  /* Button styling */
   .quiz button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
     margin-top: 15px;
   }
   
@@ -89,41 +181,89 @@ body {
     background-color: #45a049;
   }
   
+  /* Start screen styling */
+  .start-screen p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Question screen styling */
+  .question-screen {
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  /* Completion screen styling */
+  .completion-screen {
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .completion-screen h2 {
+    color: #4CAF50;
+    margin-top: 20px;
+  }
+  
+  .completion-screen button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
+  
+  .completion-screen button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Recommendations page styling */
   .recommendations {
-    padding: 20px;
+    padding: 40px;
     text-align: center;
+    background-color: #f9f9f9;
   }
   
   .recommendations h2 {
     color: #4CAF50;
+    font-size: 1.8em;
+    margin-bottom: 15px;
   }
   
   .recommendations p {
     font-size: 1.1em;
     margin: 10px 0;
+    color: #555;
   }
   
   .recommendations ul {
     list-style-type: none;
     padding: 0;
     font-size: 1.1em;
+    color: #333;
   }
   
   .recommendations li {
-    margin: 5px 0;
+    margin: 8px 0;
   }
   
+  /* About page styling */
   .about {
-    padding: 20px;
+    padding: 40px;
     text-align: center;
+    background-color: #f9f9f9;
   }
   
   .about h2 {
     color: #4CAF50;
+    font-size: 1.8em;
+    margin-bottom: 15px;
   }
   
   .about p {
     font-size: 1.1em;
     margin: 10px 0;
+    color: #555;
   }
   

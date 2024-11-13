@@ -1,12 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/quiz');
+  };
+
   return (
     <div className="home">
       <h2>Welcome to Personalized Gummies</h2>
-      <p>Take control of your health with our personalized gummy supplements. Answer a few questions, and we'll create a gummy supplement pack tailored just for you!</p>
-      <p>Perfect for those with specific health needs, dietary preferences, or simply anyone looking for a fun and easy way to take vitamins.</p>
-      <button>Get Started</button>
+      <p>Get a personalized daily gummy supplement pack tailored to your health needs!</p>
+      <button onClick={handleGetStarted}>Get Started</button>
     </div>
   );
 }
