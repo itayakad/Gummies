@@ -1,18 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import RecommendationsChart from './RecommendationsChart'; // Import the chart component
 
 function Recommendations() {
-  return (
-    <div className="recommendations">
-      <h2>Your Personalized Recommendations</h2>
-      <p>Based on your quiz results, here are the recommended supplements for you:</p>
-      <ul>
-        <li>Vitamin D - Supports immune function and bone health</li>
-        <li>Omega-3 - Helps reduce inflammation and supports heart health</li>
-        <li>Magnesium - Aids in muscle function and relaxation</li>
-      </ul>
-      <p>Check back here after completing the quiz to see more recommendations!</p>
-    </div>
-  );
-}
+  const location = useLocation();
+  const { solutionCounts } = location.state || {};
+  const [sortedRecommendations, setSortedRecommendations] = useState([]);
 
-export default Recommendations;
+  useEffect(() => {
+    if (solutionCounts) {
+      const totalCount = Object.values(solutionCounts).reduce((sum, count) => sum + count, 0);
+      const sorted = Object.entries(solutionCounts)
+        .map(([solution, count]) => ({
+      
