@@ -8,7 +8,7 @@ Backend folder lacks "env" since it is also too big (can be added by creating yo
 
 This is how the full working directory should look:
 
-../gummies/
+'''../gummies/
 ├── backend/
 │   ├── api/
 │   │   ├── __init__.py
@@ -58,3 +58,4 @@ This is how the full working directory should look:
 │   ├── package-lock.json    (Exact versions of dependencies)
 │   ├── package.json         (Project metadata and dependencies)
 │   └── README.md            (Documentation for the project)
+'''
