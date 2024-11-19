@@ -1,4 +1,3 @@
-'''text
 Frontend uses React.js, backend uses Django
 
 NOTE:
