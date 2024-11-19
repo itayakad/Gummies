@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Quiz from './pages/Quiz';
 import Recommendations from './pages/Recommendations';
 import About from './pages/About';
+import Login from './pages/Login'; // Corrected import path
+import TestBackend from './pages/TestBackend'; // Import the backend test component
 import './App.css';
 
 function App() {
@@ -30,6 +32,9 @@ function App() {
             <NavLink to="/about" className={({ isActive }) => (isActive ? 'active-link' : '')}>
               About
             </NavLink>
+            <NavLink to="/test-backend" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              Test Backend
+            </NavLink>
           </nav>
         </div>
       </header>
@@ -39,6 +44,8 @@ function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} /> {/* Added and corrected the Login route */}
+          <Route path="/test-backend" element={<TestBackend />} />
         </Routes>
       </main>
       <footer>
