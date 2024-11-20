@@ -9,4 +9,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('', root_view),  # Root path mapped to a custom view
+    path('auth/', include('authentication.urls'))
 ]
