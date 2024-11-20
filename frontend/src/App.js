@@ -4,8 +4,10 @@ import Home from './pages/Home';
 import Quiz from './pages/Quiz';
 import Recommendations from './pages/Recommendations';
 import About from './pages/About';
-import Login from './pages/Login'; // Corrected import path
-import TestBackend from './pages/TestBackend'; // Import the backend test component
+import Login from './pages/Login';
+import TestBackend from './pages/TestBackend';
+import Dashboard from './pages/Dashboard'; // Import the Dashboard component
+import PrivateRoute from './components/PrivateRoute';
 import './App.css';
 
 function App() {
@@ -13,9 +15,12 @@ function App() {
     <Router>
       <header>
         <div className="header-top">
-          <NavLink to="/login" className="account-link">
-            <i className="fas fa-user"></i> Account
-          </NavLink>
+        <NavLink
+          to={localStorage.getItem('token') ? '/dashboard' : '/login'}
+          className="account-link"
+        >
+          <i className="fas fa-user"></i> Account
+        </NavLink>
         </div>
         <div className="header-content">
           <h1>Personalized Gummies</h1>
@@ -44,8 +49,9 @@ function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} /> {/* Added and corrected the Login route */}
+          <Route path="/login" element={<Login />} />
           <Route path="/test-backend" element={<TestBackend />} />
+          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
         </Routes>
       </main>
       <footer>
